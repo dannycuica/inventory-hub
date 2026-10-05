@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  color: #1f2937;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.app-header {
+  background: #17365d;
+  color: white;
+  padding: 24px 32px;
+}
+
+.header-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.app-header h1 {
+  margin: 0 0 6px;
+  font-size: 30px;
+}
+
+.app-header p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.milestone-badge {
+  background: white;
+  color: #17365d;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.app-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 20px 50px;
+}
+
+.welcome-section {
+  margin-bottom: 28px;
+}
+
+.welcome-section h2 {
+  margin: 0 0 8px;
+  font-size: 25px;
+}
+
+.welcome-section p {
+  margin: 0;
+  color: #5b6470;
+  line-height: 1.6;
+}
+
+.component-section {
+  margin-bottom: 28px;
+}
+
+.component-card {
+  background: white;
+  border: 1px solid #dce1e7;
+  border-radius: 10px;
+  padding: 26px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.component-card h2 {
+  margin: 0 0 8px;
+  color: #17365d;
+  font-size: 22px;
+}
+
+.description {
+  margin: 0 0 24px;
+  color: #667085;
+  line-height: 1.5;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  border: 1px solid #cbd2d9;
+  border-radius: 6px;
+  padding: 10px 12px;
+  background: white;
+  color: #1f2937;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #17365d;
+  box-shadow: 0 0 0 2px rgba(23, 54, 93, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group small {
+  color: #b42318;
+  font-size: 12px;
+}
+
+.component-card button {
+  margin-top: 22px;
+  border: none;
+  border-radius: 6px;
+  background: #17365d;
+  color: white;
+  padding: 11px 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.component-card button:hover {
+  background: #102a4a;
+}
+
+.app-footer {
+  text-align: center;
+  padding: 22px;
+  background: #17365d;
+  color: white;
+  font-size: 13px;
+}
+
+.app-footer p {
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full-width {
+    grid-column: auto;
+  }
+
+  .app-container {
+    padding: 24px 14px 40px;
+  }
+
+  .component-card {
+    padding: 20px;
+  }
+}

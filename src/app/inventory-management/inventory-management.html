@@ -1,0 +1,49 @@
+<section class="component-card">
+  <h2>Inventory Management</h2>
+  <p class="description">Add a product to the Inventory Hub product catalog.</p>
+
+  <form [formGroup]="inventoryForm" (ngSubmit)="submitForm()">
+
+    <div class="form-grid">
+
+      <div class="form-group">
+        <label for="productCode">Product Code</label>
+        <input id="productCode" type="text" formControlName="productCode">
+        @if (inventoryForm.controls.productCode.invalid && inventoryForm.controls.productCode.touched) {
+          <small>Product code is required.</small>
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="productName">Product Name</label>
+        <input id="productName" type="text" formControlName="productName">
+        @if (inventoryForm.controls.productName.invalid && inventoryForm.controls.productName.touched) {
+          <small>Product name is required.</small>
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="unitCost">Unit Cost</label>
+        <input id="unitCost" type="number" formControlName="unitCost">
+      </div>
+
+      <div class="form-group">
+        <label for="sellingPrice">Selling Price</label>
+        <input id="sellingPrice" type="number" formControlName="sellingPrice">
+      </div>
+
+      <div class="form-group">
+        <label for="category">Category</label>
+        <input id="category" type="text" formControlName="category">
+      </div>
+
+      <div class="form-group">
+        <label for="quantity">Current Quantity</label>
+        <input id="quantity" type="number" formControlName="quantity">
+      </div>
+
+    </div>
+
+    <button type="submit">Add Product</button>
+  </form>
+</section>

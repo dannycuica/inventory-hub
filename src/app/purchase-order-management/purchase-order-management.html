@@ -1,0 +1,72 @@
+<section class="component-card">
+  <h2>Purchase Order Management</h2>
+  <p class="description">
+    Create a purchase order from a supplier for products required by the store.
+  </p>
+
+  <form [formGroup]="purchaseOrderForm" (ngSubmit)="submitForm()">
+
+    <div class="form-grid">
+
+      <div class="form-group">
+        <label for="supplier">Supplier</label>
+        <select id="supplier" formControlName="supplier">
+          <option value="">Select supplier</option>
+          <option value="ABC Supplies">ABC Supplies</option>
+          <option value="Nairobi Wholesale">Nairobi Wholesale</option>
+          <option value="City Distributors">City Distributors</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="product">Product(s)</label>
+        <select id="product" formControlName="product">
+          <option value="">Select product</option>
+          <option value="Laptop">Laptop</option>
+          <option value="Keyboard">Keyboard</option>
+          <option value="Mouse">Mouse</option>
+          <option value="Monitor">Monitor</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="quantity">Quantity</label>
+        <input id="quantity" type="number" min="1" formControlName="quantity">
+      </div>
+
+      <div class="form-group">
+        <label for="unitCost">Unit Cost</label>
+        <input id="unitCost" type="number" min="0" formControlName="unitCost">
+      </div>
+
+      <div class="form-group">
+        <label for="orderDate">Order Date</label>
+        <input id="orderDate" type="date" formControlName="orderDate">
+      </div>
+
+      <div class="form-group">
+        <label for="expectedDate">Expected Date</label>
+        <input id="expectedDate" type="date" formControlName="expectedDate">
+      </div>
+
+      <div class="form-group">
+        <label for="status">Status</label>
+        <select id="status" formControlName="status">
+          <option value="Pending">Pending</option>
+          <option value="Submitted">Submitted</option>
+          <option value="Approved">Approved</option>
+          <option value="Received">Received</option>
+          <option value="Cancelled">Cancelled</option>
+        </select>
+      </div>
+
+      <div class="form-group full-width">
+        <label for="notes">Notes</label>
+        <textarea id="notes" rows="4" formControlName="notes"></textarea>
+      </div>
+
+    </div>
+
+    <button type="submit">Create Purchase Order</button>
+  </form>
+</section>

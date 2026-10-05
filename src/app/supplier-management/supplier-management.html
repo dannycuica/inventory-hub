@@ -1,0 +1,48 @@
+<section class="component-card">
+  <h2>Supplier Management</h2>
+  <p class="description">Add supplier information to the Inventory Hub supplier list.</p>
+
+  <form [formGroup]="supplierForm" (ngSubmit)="submitForm()">
+
+    <div class="form-grid">
+
+      <div class="form-group">
+        <label for="supplierName">Supplier Name</label>
+        <input id="supplierName" type="text" formControlName="supplierName">
+      </div>
+
+      <div class="form-group">
+        <label for="contactInformation">Contact Information</label>
+        <input id="contactInformation" type="text" formControlName="contactInformation">
+      </div>
+
+      <div class="form-group">
+        <label for="streetAddress">Street Address</label>
+        <input id="streetAddress" type="text" formControlName="streetAddress">
+      </div>
+
+      <div class="form-group">
+        <label for="zipCode">ZIP Code</label>
+        <input id="zipCode" type="text" formControlName="zipCode">
+      </div>
+
+      <div class="form-group">
+        <label for="city">City</label>
+        <input id="city" type="text" formControlName="city">
+      </div>
+
+      <div class="form-group">
+        <label for="state">State</label>
+        <input id="state" type="text" formControlName="state">
+      </div>
+
+      <div class="form-group">
+        <label for="averageLeadTime">Average Lead Time (days)</label>
+        <input id="averageLeadTime" type="number" formControlName="averageLeadTime">
+      </div>
+
+    </div>
+
+    <button type="submit">Add Supplier</button>
+  </form>
+</section>

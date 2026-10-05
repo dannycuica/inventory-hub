@@ -1,0 +1,43 @@
+<section class="component-card">
+  <h2>Sales Management</h2>
+  <p class="description">Record a customer sale and generate the sales record.</p>
+
+  <form [formGroup]="salesForm" (ngSubmit)="submitForm()">
+
+    <div class="form-grid">
+
+      <div class="form-group">
+        <label for="customerName">Customer Name</label>
+        <input id="customerName" type="text" formControlName="customerName">
+      </div>
+
+      <div class="form-group">
+        <label for="purchaseDate">Date of Purchase</label>
+        <input id="purchaseDate" type="date" formControlName="purchaseDate">
+      </div>
+
+      <div class="form-group">
+        <label for="product">Product(s)</label>
+        <input id="product" type="text" formControlName="product">
+      </div>
+
+      <div class="form-group">
+        <label for="paymentMethod">Payment Method</label>
+        <select id="paymentMethod" formControlName="paymentMethod">
+          <option value="">Select payment method</option>
+          <option value="Cash">Cash</option>
+          <option value="Card">Card</option>
+          <option value="Mobile Money">Mobile Money</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="totalPrice">Total Price</label>
+        <input id="totalPrice" type="number" formControlName="totalPrice">
+      </div>
+
+    </div>
+
+    <button type="submit">Record Sale</button>
+  </form>
+</section>
